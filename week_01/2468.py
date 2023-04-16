@@ -2,17 +2,17 @@
 
 from collections import deque
 
-def bfs(si, sj, h):
+def bfs(si, sj, h): # start i, start j, h 
     q = deque()
 
     q.append((si,sj))
-    v[si][sj]=1
+    v[si][sj]=1 # visited
 
     while q:
-        ci,cj = q.popleft()
+        ci,cj = q.popleft() # current i, current j
         # 네방향, 범위내, 미방문, 높이 > h
-        for di, dj in ((-1,0),(1,0),(0,-1),(0,1)):
-            ni,nj = ci+di, cj+dj
+        for di, dj in ((-1,0),(1,0),(0,-1),(0,1)): # direction i, direction j
+            ni,nj = ci+di, cj+dj # next i, next j
             if 0<=ni<N and 0<=nj<N and v[ni][nj] == 0 and arr[ni][nj]>h:
                 q.append((ni,nj))
                 v[ni][nj]=1
