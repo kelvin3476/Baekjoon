@@ -3,9 +3,9 @@ import sys
 import heapq
 input = sys.stdin.readline
 
-n = int(input())
-max_h = []
-min_h = []
+n = int(input()) # 7
+max_h = [] # [-1], [-2, -1], [-2, -1, 99], [-5, -2, 99, -1]
+min_h = [] # [5], [5, 10], [5, 10, 7]
 
 for i in range(n):
     num = int(input())
@@ -22,3 +22,12 @@ for i in range(n):
         heapq.heappush(min_h, max_value)
 
     print(max_h[0] * -1)
+
+# ex) [1, 5, 2, 10, -99, 7, 5]
+# num = 1 👉🏻 left = [-1] / right = []
+# num = 5 👉🏻 left = [-1], right = [5]
+# num = 2 👉🏻 left = [-2,-1], right = [5]
+# num = 10 👉🏻 left = [-2,-1], right = [5,10]
+# num = -99 👉🏻 left = [-2,-1,99], right = [5,10]
+# num = 7 👉🏻 left = [-2,-1,99], right = [5,7,10]
+# num = 5 👉🏻 left = [-5,-2,-1,99], right = [5,7,10]

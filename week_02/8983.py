@@ -15,8 +15,8 @@ for x, y in animals: # x, y 에 동물 좌표
         if abs(shooting_stand_list[mid] - x) + y <= distance or abs(shooting_stand_list[mid-1] - x) + y <= distance: #end와 end-1은 a의 왼쪽 오른쪽 값 ㅣxj - ajㅣ + bj <= l 이면 동물을 잡은거니 count +1
             count += 1
             break
-        if shooting_stand_list[mid] < x: #m_list의 중간 인덱스가 x보다 작으면 x보다 mid가 작으므로 스타트지점 옮김
+        if shooting_stand_list[mid] < x: #shooting_stand_list의 중간 인덱스가 x보다 작으면 x보다 mid가 작으므로 스타트지점 옮김
             start = mid + 1
         else:
-            end = mid - 1 #m_list의 중간 인덱스가 x보다 크면 끝지점 옮김  end의 위치가 x랑 가장 가까운 수가 됨
+            end = mid - 1 #shooting_stand_list의 중간 인덱스가 x보다 크면 끝지점 옮김  end의 위치가 x랑 가장 가까운 수가 됨
 print(count)
