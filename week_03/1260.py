@@ -7,7 +7,6 @@ input = sys.stdin.readline
 def bfs(v):
     q = deque()
     q.append(v)
-    print(q)
     visit_list[v] = 1 
     while q:
         v = q.popleft()
@@ -34,6 +33,6 @@ for _ in range(m): # (5)
     a, b = map(int, input().split()) # (1, 2) (1, 3) (1, 4) (2, 4) (3, 4) 
     graph[a][b] = graph[b][a] = 1 
 
-# dfs(v)
-# print()
-# bfs(v)
+dfs(v)
+print()
+bfs(v)
