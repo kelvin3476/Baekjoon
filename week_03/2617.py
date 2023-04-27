@@ -15,12 +15,12 @@ def dfs(graph, vertex):
             dfs(graph, next_vertex)
 count = 0
 for i in range(1, N + 1):
-    visit = [False] * (N + 1)
+    visit = [False] * (N + 1) # graphB visited
     dfs(graphB, i)
     if sum(visit) - 1 >= N // 2 + 1:
         count += 1
     else:
-        visit = [False] * (N + 1)
+        visit = [False] * (N + 1) # graphS visited
         dfs(graphS, i)
         if sum(visit) - 1 >= N // 2 + 1:
             count += 1
