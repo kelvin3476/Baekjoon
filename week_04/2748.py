@@ -1,6 +1,6 @@
 # source code: https://velog.io/@yj_lee/%EB%B0%B1%EC%A4%80-2748%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%EC%88%98-2-%ED%8C%8C%EC%9D%B4%EC%8D%AC
 
-# # 상향식 풀이법 (Bottom-Up) 
+# 상향식 풀이법 (Bottom-Up) 
 
 # import sys
 # input = sys.stdin.readline
@@ -30,3 +30,23 @@ def fibo(n):
 
 n = int(input())
 print(fibo(n))
+
+# 재귀만 사용했을때 (input <= 99 넣어보면 깨달음)
+
+# import sys
+# input = sys.stdin.readline
+
+# dp = [-1] * 100
+# dp[0] = 0
+# dp[1] = 1
+
+# def fibo(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return fibo(n-1) + fibo(n-2)
+
+# n = int(input())    
+# print(fibo(n))
