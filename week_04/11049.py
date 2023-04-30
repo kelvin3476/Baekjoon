@@ -1,4 +1,4 @@
-# # pypy3 만 통과 상향식 풀이법 (Bottom-Up)
+# pypy3 만 통과 상향식 풀이법 (Bottom-Up)
 # import sys
 # sys.setrecursionlimit(10**4)
 # input = sys.stdin.readline
