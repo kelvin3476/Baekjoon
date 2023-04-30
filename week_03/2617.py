@@ -1,3 +1,5 @@
+# Reference: https://velog.io/@johnny/baek-2617
+
 import sys
 sys.setrecursionlimit(10**6)
 
