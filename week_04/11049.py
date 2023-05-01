@@ -22,7 +22,7 @@
 
 # print(dp[0][n-1]) # 행렬 0부터 n-1까지의 곱셈을 하는데 필요한 최소 곱셈 연산 횟수를 출력함
 
-# 하향식 풀이법 (Top-Down)
+# pypy3 만 통과 하향식 풀이법 (Top-Down)
 import sys
 sys.setrecursionlimit(10**4)
 input = sys.stdin.readline
