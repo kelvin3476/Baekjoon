@@ -27,6 +27,7 @@
 
 # 하향식 풀이법(Top-Down)
 import sys
+input = sys.stdin.readline
 
 inf = 2000000000
 n, m = map(int, input().split())
